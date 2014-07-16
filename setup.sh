@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Borrowed from https://github.com/pmdz/vimconfig
-
 if [ ! -e $HOME/.vimrc ]; then
   echo "-> Creating $HOME/.vimrc symbolic link"
   ln -s $HOME/.vim/vimrc $HOME/.vimrc
@@ -12,10 +10,18 @@ if [ ! -e $HOME/.gvimrc ]; then
   ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
 fi
 
-if [ ! -e $HOME/.vim/bindings.vim ]; then
-  echo "-> Creating symlink for bindings.vim"
-  ln -s $HOME/.vim/after/plugin/bindings.vim $HOME/.vim/bindings.vim
+if [ ! -e $HOME/.vim/_backup ]; then
+  mkdir $HOME/.vim/_backup
 fi
+
+if [ ! -e $HOME/.vim/_temp ]; then
+  mkdir $HOME/.vim/_temp
+fi
+
+#if [ ! -e $HOME/.vim/bindings.vim ]; then
+#  echo "-> Creating symlink for bindings.vim"
+#  ln -s $HOME/.vim/after/plugin/bindings.vim $HOME/.vim/bindings.vim
+#fi
 
 mkdir -p $HOME/.vim/bundle/Vundle.vim/
 echo "-> Installing vundle..."
