@@ -32,6 +32,11 @@ Plugin 'vim-scripts/peaksea'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"source ~/.vim/global.vim
-"source ~/.vim/filetypes.vim
-"source ~/.vim/plugins.vim
+source ~/.vim/settings/generic_settings.vim
+source ~/.vim/settings/generic_bindings.vim
+source ~/.vim/settings/filetypes.vim
+source ~/.vim/settings/plugins.vim
+
+if filereadable(glob("~/.vim/settings/_os_specific.vim")) 
+    source ~/.vim/settings/_os_specific.vim
+endif
