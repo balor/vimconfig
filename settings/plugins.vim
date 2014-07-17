@@ -22,12 +22,14 @@ vmap <leader>/ :call NERDComment(0, "invert")<cr>
 
 " YouCompleteMe
 " don't use completion shortcuts
-"let g:ycm_key_list_select_completion = []
-"let g:ycm_key_list_previous_completion = []
+let g:ycm_key_list_select_completion = []
+let g:ycm_key_list_previous_completion = []
 
 " NERDTree
 nnoremap <leader>d :NERDTreeToggle<cr>
-let NERDTreeIgnore = ['\.pyc$','\.pyo$']
+let NERDTreeIgnore = ['\.pyc$','\.pyo$'] " ignored files
+let g:NERDTreeChDirMode=2 " allow nerdtree to change CWD
+let NERDTreeMinimalUI=1 " hide tips
 
 " MiniBuffers
 "let g:miniBufExplMapWindowNavVim = 1

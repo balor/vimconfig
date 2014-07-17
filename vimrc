@@ -25,7 +25,7 @@ Plugin 'scrooloose/nerdtree'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'elzr/vim-json'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/peaksea'
 
 " All of your Plugins must be added before the following line
