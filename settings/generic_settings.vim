@@ -42,6 +42,9 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz "ignore archive
 " Ruler
 set ruler
 
+" I like my backspace...
+set backspace=2
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
