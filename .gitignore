@@ -3,3 +3,5 @@
 bundle/*
 _backup
 _temp
+settings/_os_specific.vim
+.netrwhist

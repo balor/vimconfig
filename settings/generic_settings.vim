@@ -10,7 +10,6 @@ set backupdir=~/.vim/_backup/
 set directory=~/.vim/_temp/
 
 " Mouse and terminal
-set term=xterm2 "disable on mac
 set ttymouse=xterm2
 set mouse=a
 

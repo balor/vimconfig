@@ -18,10 +18,14 @@ if [ ! -e $HOME/.vim/_temp ]; then
   mkdir $HOME/.vim/_temp
 fi
 
-#if [ ! -e $HOME/.vim/bindings.vim ]; then
-#  echo "-> Creating symlink for bindings.vim"
-#  ln -s $HOME/.vim/after/plugin/bindings.vim $HOME/.vim/bindings.vim
-#fi
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]] || [[ "$unamestr" == 'FreeBSD' ]] || [[ "$unamestr" == 'Linux-BSD' ]] ; then
+  echo "-> Linking Linux/BSD specific settings"
+  ln -s $HOME/.vim/settings/os_specific/linux.vim $HOME/.vim/settings/_os_specific.vim
+elif [[ "$unamestr" == 'Darwin' ]] ; then
+  echo "-> Linking Darwin specific settings"
+  ln -s $HOME/.vim/settings/os_specific/darwin.vim $HOME/.vim/settings/_os_specific.vim
+fi
 
 mkdir -p $HOME/.vim/bundle/Vundle.vim/
 echo "-> Installing vundle..."

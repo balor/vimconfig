@@ -23,16 +23,15 @@ Plugin 'scrooloose/nerdtree'
 "Plugin 'scrooloose/syntastic'
 "Plugin 'bling/vim-airline'
 "Plugin 'davidhalter/jedi-vim'
-"Plugin 'kchmck/vim-coffee-script'
-"Plugin 'elzr/vim-json'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'elzr/vim-json'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/peaksea'
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-source ~/.vim/global.vim
+"source ~/.vim/global.vim
 "source ~/.vim/filetypes.vim
-source ~/.vim/plugins.vim
+"source ~/.vim/plugins.vim
