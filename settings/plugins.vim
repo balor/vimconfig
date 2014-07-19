@@ -12,7 +12,7 @@ vmap <leader>/ :call NERDComment(0, "invert")<cr>
 " :: YouCompleteMe :;
 " only tab as the selector
 let g:ycm_key_list_select_completion = ['<TAB>']
-let g:ycm_key_list_previous_completion = ['<TAB>']
+let g:ycm_key_list_previous_completion = []
 
 " :: jedi ::
 let g:jedi#auto_vim_configuration = 0
