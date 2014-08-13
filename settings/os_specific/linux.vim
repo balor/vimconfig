@@ -1,1 +1,1 @@
-set term=xterm2
+" Linux conf placeholder
