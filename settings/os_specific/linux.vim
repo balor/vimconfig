@@ -1,1 +1,1 @@
-" Linux conf placeholder
+" placeholder for Linux conf
