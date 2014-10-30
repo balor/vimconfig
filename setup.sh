@@ -22,9 +22,11 @@ unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]] || [[ "$unamestr" == 'FreeBSD' ]] || [[ "$unamestr" == 'Linux-BSD' ]] ; then
   echo "-> Linking Linux/BSD specific settings"
   ln -s $HOME/.vim/settings/os_specific/linux.vim $HOME/.vim/settings/_os_specific.vim
+  ln -s $HOME/.vim/settings/os_specific/linux.gvim $HOME/.vim/settings/_os_specific.gvim
 elif [[ "$unamestr" == 'Darwin' ]] ; then
   echo "-> Linking Darwin specific settings"
   ln -s $HOME/.vim/settings/os_specific/darwin.vim $HOME/.vim/settings/_os_specific.vim
+  ln -s $HOME/.vim/settings/os_specific/darwin.gvim $HOME/.vim/settings/_os_specific.gvim
 fi
 
 mkdir -p $HOME/.vim/bundle/Vundle.vim/

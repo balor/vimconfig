@@ -4,4 +4,5 @@ bundle/*
 _backup
 _temp
 settings/_os_specific.vim
+settings/_os_specific.gvim
 .netrwhist

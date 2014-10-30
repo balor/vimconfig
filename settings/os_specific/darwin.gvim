@@ -1,0 +1,4 @@
+set fuopt+=maxhorz
+set guifont=Pragmata\ TT:h13
+set vb
+
