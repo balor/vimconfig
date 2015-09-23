@@ -28,6 +28,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'vim-scripts/mako.vim'
 Plugin 'elzr/vim-json'
 Plugin 'vim-scripts/peaksea'
+Plugin 'dkprice/vim-easygrep'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
