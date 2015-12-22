@@ -19,6 +19,7 @@ let g:jedi#auto_vim_configuration = 0
 let g:jedi#popup_select_first = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#goto_command = ""
 let g:jedi#goto_assignments_command = "<leader>a"
 let g:jedi#goto_definitions_command = "<leader>z"
 let g:jedi#documentation_command = "K"
@@ -34,9 +35,9 @@ let g:NERDTreeChDirMode=2 " allow nerdtree to change CWD
 let NERDTreeMinimalUI=1 " hide tips
 
 " :: Vim-Airline ::
-let g:airline_enable_branch     = 1
 let g:airline_theme             = 'simple'
-let g:airline_enable_syntastic  = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 " let g:airline_powerline_fonts   = 1
 
 " :: Ctrl-P :;
