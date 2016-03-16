@@ -30,7 +30,6 @@ Plugin 'vim-scripts/peaksea'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'stephpy/vim-yaml'
 Plugin 'elzr/vim-json'
-Plugin 'pearofducks/ansible-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
