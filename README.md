@@ -1,9 +1,7 @@
 vimconfig
 =========
 
-My personal dirty little vim config. Compatible with vim and neovim, using [vim-plug](https://github.com/junegunn/vim-plug) for plugin management.
-
-= Fluxid, You'll be always in my mind buddy. =
+My personal dirty little vim config. Compatible with [vim 8](https://www.vim.org/) and [neovim](https://neovim.io/), plugin management via [vim-plug](https://github.com/junegunn/vim-plug).
 
 ## Installing VIM 8 on Ubuntu
 
@@ -20,3 +18,7 @@ Ubuntu 18.04:
 ```
 $ sudo apt-get install vim
 ```
+
+---
+
+*Fluxid, You'll be always in my mind buddy.*
