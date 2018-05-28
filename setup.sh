@@ -1,15 +1,5 @@
 #!/bin/bash
 
-if [ ! -e $HOME/.vimrc ]; then
-  echo "-> Creating $HOME/.vimrc symbolic link"
-  ln -s $HOME/.vim/vimrc $HOME/.vimrc
-fi
-
-if [ ! -e $HOME/.gvimrc ]; then
-  echo "-> Creating $HOME/.gvimrc symbolic link"
-  ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
-fi
-
 if [ ! -e $HOME/.vim/_backup ]; then
   mkdir $HOME/.vim/_backup
 fi
@@ -18,8 +8,11 @@ if [ ! -e $HOME/.vim/_temp ]; then
   mkdir $HOME/.vim/_temp
 fi
 
+$NEOVIM_SETUP = false
+
 if type "nvim" > /dev/null; then
-  echo "-> Neovim detected, installing additional symlinks..."
+  echo "Neovim detected"
+	$NEOVIM_SETUP = true
 
   if [ ! -e $HOME/.config/nvim ]; then
     mkdir $HOME/.config/nvim
@@ -29,6 +22,18 @@ if type "nvim" > /dev/null; then
     echo "-> Creating $HOME/.config/nbim/init.vim symbolic link"
     ln -s $HOME/.vim/vimrc $HOME/.config/nvim/init.vim
   fi
+elif type "vim" > /dev/null; then
+	echo "Classic vim detected"
+
+	if [ ! -e $HOME/.vimrc ]; then
+		echo "-> Creating $HOME/.vimrc symbolic link"
+		ln -s $HOME/.vim/vimrc $HOME/.vimrc
+	fi
+
+	if [ ! -e $HOME/.gvimrc ]; then
+		echo "-> Creating $HOME/.gvimrc symbolic link"
+		ln -s $HOME/.vim/gvimrc $HOME/.gvimrc
+	fi
 fi
 
 unamestr=`uname`
@@ -42,7 +47,13 @@ elif [[ "$unamestr" == 'Darwin' ]] ; then
   ln -s $HOME/.vim/settings/os_specific/darwin.gvim $HOME/.vim/settings/_os_specific.gvim
 fi
 
-mkdir -p $HOME/.vim/bundle/Vundle.vim/
-echo "-> Installing vundle..."
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+echo "-> Downloading vim-plug"
+if $NEOVIM_SETUP; then
+	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+else
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
+vim +PlugInstall +qall

@@ -6,32 +6,31 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+
+" set the vim-plug plugin directory
+call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plug 'VundleVim/Vundle.vim'
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-scripts/mako.vim'
-Plugin 'vim-scripts/peaksea'
-Plugin 'dkprice/vim-easygrep'
-Plugin 'stephpy/vim-yaml'
-Plugin 'elzr/vim-json'
+Plug 'tpope/vim-fugitive'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'davidhalter/jedi-vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'kchmck/vim-coffee-script'
+Plug 'vim-scripts/mako.vim'
+Plug 'vim-scripts/peaksea'
+Plug 'dkprice/vim-easygrep'
+Plug 'stephpy/vim-yaml'
+Plug 'elzr/vim-json'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+" Initialize vim-plug plugin system
+call plug#end()
 
 source ~/.vim/settings/generic_settings.vim
 source ~/.vim/settings/generic_bindings.vim

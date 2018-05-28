@@ -1,6 +1,7 @@
 .DS_Store
 /bindings.vim
 bundle/*
+plugged/*
 _backup
 _temp
 settings/_os_specific.vim
