@@ -8,11 +8,11 @@ if [ ! -e $HOME/.vim/_temp ]; then
   mkdir $HOME/.vim/_temp
 fi
 
-$NEOVIM_SETUP = false
+NEOVIM_SETUP=false
 
 if type "nvim" > /dev/null; then
   echo "Neovim detected"
-	$NEOVIM_SETUP = true
+  NEOVIM_SETUP=true
 
   if [ ! -e $HOME/.config/nvim ]; then
     mkdir $HOME/.config/nvim
