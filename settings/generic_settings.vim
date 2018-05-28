@@ -6,8 +6,16 @@ set backupdir=~/.vim/_backup/
 set directory=~/.vim/_temp/
 
 " Mouse and terminal
-set ttymouse=xterm2
-set mouse=a
+if has('mouse')
+    if !has('nvim')
+		if has('mouse_sgr')
+			set ttymouse=sgr
+		else
+			set ttymouse=xterm2
+		end
+    endif 
+    set mouse=a
+endif
 
 " 256 Colors support
 set t_Co=256
