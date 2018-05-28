@@ -1,26 +1,22 @@
 vimconfig
 =========
 
-My dirty little vim config that i love :D 
+My personal dirty little vim config. Compatible with vim and neovim, using [vim-plug](https://github.com/junegunn/vim-plug) for plugin management.
 
-Inspired by [pmdz's one](https://github.com/pmdz/vimconfig).
+= Fluxid, You'll be always in my mind buddy. =
 
-~= Fluxid, You'll be always in my mind buddy. =~
+## Installing VIM 8 on Ubuntu
 
-## Installing fresh VIM
-
-Ubuntu:
+Ubuntu 16.04:
 
 ```
-$ sudo add-apt-repository ppa:fcwu-tw/ppa
+$ sudo add-apt-repository ppa:jonathonf/vim
 $ sudo apt-get update
 $ sudo apt-get install vim
 ```
 
-OS X:
+Ubuntu 18.04:
 
 ```
-$ sudo brew install vim
-$ sudo mv /usr/bin/vim /usr/bin/_vim
-$ sudo ln -s /usr/local/bin/vim /usr/bin/vim
+$ sudo apt-get install vim
 ```
