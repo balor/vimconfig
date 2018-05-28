@@ -13,21 +13,31 @@ call plug#begin('~/.vim/plugged')
 " let Vundle manage Vundle, required
 Plug 'VundleVim/Vundle.vim'
 
+" git wrapper
 Plug 'tpope/vim-fugitive'
+
+" fuzzy file opener
 Plug 'kien/ctrlp.vim'
+
+" commentary plugin
 Plug 'scrooloose/nerdcommenter'
+
+" tree explorer
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'davidhalter/jedi-vim'
-Plug 'Valloric/YouCompleteMe'
+
+" syntax check
+Plug 'w0rp/ale'
+
+" statusline
+Plug 'itchyny/lightline.vim'
+
+" file types plugins
 Plug 'kchmck/vim-coffee-script'
 Plug 'vim-scripts/mako.vim'
+Plug 'vim-scripts/nginx.vim'
+
+" color themes
 Plug 'vim-scripts/peaksea'
-Plug 'dkprice/vim-easygrep'
-Plug 'stephpy/vim-yaml'
-Plug 'elzr/vim-json'
 
 " Initialize vim-plug plugin system
 call plug#end()
