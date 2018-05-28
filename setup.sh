@@ -18,6 +18,19 @@ if [ ! -e $HOME/.vim/_temp ]; then
   mkdir $HOME/.vim/_temp
 fi
 
+if type "nvim" > /dev/null; then
+  echo "-> Neovim detected, installing additional symlinks..."
+
+  if [ ! -e $HOME/.config/nvim ]; then
+    mkdir $HOME/.config/nvim
+  fi
+
+  if [ ! -e $HOME/.config/nvim/init.vim ]; then
+    echo "-> Creating $HOME/.config/nbim/init.vim symbolic link"
+    ln -s $HOME/.vim/vimrc $HOME/.config/nvim/init.vim
+  fi
+fi
+
 unamestr=`uname`
 if [[ "$unamestr" == 'Linux' ]] || [[ "$unamestr" == 'FreeBSD' ]] || [[ "$unamestr" == 'Linux-BSD' ]] ; then
   echo "-> Linking Linux/BSD specific settings"
@@ -31,5 +44,5 @@ fi
 
 mkdir -p $HOME/.vim/bundle/Vundle.vim/
 echo "-> Installing vundle..."
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
