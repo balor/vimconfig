@@ -42,4 +42,5 @@ au BufRead,BufNewFile *.json set ft=json syntax=json tabstop=2 shiftwidth=2 soft
 "
 " :: YAML ::
 au BufRead,BufNewFile *.yaml set ft=yaml syntax=yaml tabstop=2 shiftwidth=2 softtabstop=2
+au BufRead,BufNewFile *.yml set ft=yaml syntax=yaml tabstop=2 shiftwidth=2 softtabstop=2
 
